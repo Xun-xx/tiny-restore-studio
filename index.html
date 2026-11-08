@@ -1,119 +1,190 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#e9f7f2" />
-  <meta name="description" content="小小翻新工作室｜制作温暖、治愈、有一点手作感的独立小游戏。目前正在开发玻璃修复主题的休闲解压游戏。" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="小小翻新工作室 | Tiny Restore Studio" />
-  <meta property="og:description" content="把小小的破损，修成大大的快乐。欢迎来到小小翻新工作室。" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ecf8f3">
+  <meta name="description" content="小小翻新工作室｜一间喜欢探索新鲜创意、认真打磨小快乐的独立游戏工作室。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="小小翻新工作室 · Tiny Restore Studio">
+  <meta property="og:description" content="让小小的灵感，慢慢闪闪发光。欢迎来到小小翻新工作室。">
+  <meta property="og:image" content="./logo.webp">
+  <link rel="icon" href="./favicon.png" type="image/png">
   <title>小小翻新工作室 · Tiny Restore Studio</title>
-  <link rel="icon" href="./favicon.png" type="image/png" />
   <style>
-    :root{--ink:#173b38;--ink-light:#345952;--muted:#6a8982;--mint:#6dcbb4;--mint-dark:#279c85;--mint-pale:#e5f7f0;--cream:#fffdf5;--paper:#f8fcf9;--line:#d9ebe4;--yellow:#f4c66f;--radius:26px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft Yahei',sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}::selection{color:var(--ink);background:#b9eadb}a:focus-visible,button:focus-visible{outline:3px solid var(--mint-dark);outline-offset:4px}.skip{position:absolute;left:1rem;top:-5rem;z-index:999;background:var(--ink);color:white;padding:12px;border-radius:10px}.skip:focus{top:1rem}
-    .wrap{width:min(1150px,calc(100% - 54px));margin-inline:auto}.site-header{background:#f7fdf9}
-    .nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:30px;position:relative;z-index:10}.nav-group{display:flex;align-items:center;gap:12px}.brand-img{width:52px;height:52px;object-fit:cover;border-radius:16px;box-shadow:0 6px 20px #2d81721c;border:2px solid #ffffff}.brand-name{font-size:17px;letter-spacing:.035em;font-weight:800;white-space:nowrap}.brand-en{font-size:10px;letter-spacing:.12em;font-weight:700;color:var(--muted);margin-top:3px}.nav-links{display:flex;align-items:center;gap:34px;font-size:13px;font-weight:700;color:#49726b}.nav-links a:hover{color:var(--mint-dark)}.nav-tag{border:1px solid #bfe6d8;border-radius:100px;background:#f4fffa;padding:10px 15px;color:#3c8a78;font-size:12px;font-weight:700;white-space:nowrap}.nav-tag i,.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#55b99d;vertical-align:middle;margin-right:7px;box-shadow:0 0 0 4px #a7e3d233}
-    .hero-wrap{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse 75% 120% at 86% 0%,#cbf3ed 0%,transparent 70%),linear-gradient(130deg,#f9fefb 25%,#edf9f4 100%);border-bottom:1px solid #e1efe8}.hero-wrap:before{content:"";pointer-events:none;position:absolute;width:520px;height:520px;border-radius:50%;border:1px solid #ffffffbb;left:-250px;bottom:-270px}.hero-wrap:after{content:"";pointer-events:none;position:absolute;width:740px;height:740px;border-radius:50%;border:1px solid #ffffffa0;right:-360px;top:-430px}.hero{min-height:615px;padding:34px 0 84px;display:grid;grid-template-columns:1.06fr .94fr;align-items:center;gap:38px;position:relative}.eyebrow{display:inline-flex;align-items:center;gap:9px;background:#e5f7f0;border:1px solid #caeae0;border-radius:100px;padding:9px 15px;color:#458a7a;font-size:12px;font-weight:750;letter-spacing:.04em}.eyebrow .star{font-size:15px;color:#e5aa36}h1,h2,h3,p{margin-top:0}.hero h1{font-size:clamp(39px,4.6vw,64px);line-height:1.24;letter-spacing:-.055em;margin:26px 0 24px;font-weight:900}.hero h1 em{font-style:normal;color:#1e9c85;position:relative;white-space:nowrap}.hero h1 em:after{content:"";height:11px;position:absolute;left:4px;right:1px;bottom:0;background:#b5e9d9;z-index:-1;border-radius:100%}.lead{font-size:16px;line-height:2.1;color:#58776f;max-width:485px}.hero-actions{display:flex;align-items:center;gap:16px;margin-top:32px;flex-wrap:wrap}.btn{border:0;display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:15px;padding:15px 22px;font-size:14px;font-weight:800;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}.btn:active{transform:scale(.98)}.btn-primary{background:#218e77;color:white;box-shadow:0 10px 25px #1c92783d}.btn-primary:hover{background:#137a65;transform:translateY(-2px);box-shadow:0 13px 30px #1c927847}.btn-secondary{border:1px solid #beddd2;color:#3e7569;background:#ffffffa6}.btn-secondary:hover{background:white}.micro{color:#88a29a;font-size:12px;margin-top:26px;line-height:1.8}.micro span{color:#328e7c;font-weight:700}
-    .scene-area{position:relative;min-height:500px;display:flex;align-items:center;justify-content:center}.scene-halo{position:absolute;width:465px;height:465px;border-radius:50%;background:radial-gradient(circle,#ffffffc9 0 53%,#bce8d96a 53% 69%,transparent 70%);filter:drop-shadow(0 15px 28px #4fba9f22)}.scene-halo:after{content:"";position:absolute;width:82px;height:82px;border:1px solid #ffffffa0;border-radius:50%;right:0;top:0}.scene-card{width:min(100%,465px);padding:22px 26px 24px;z-index:2;background:#fffdf5d8;border:1px solid #ffffffd9;border-radius:30px;box-shadow:0 28px 65px #4f9b861c,0 5px 18px #4f9b860b;backdrop-filter:blur(10px);transform:rotate(2deg);transition:transform .45s}.scene-card:hover{transform:rotate(0)}.scene-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;gap:10px}.scene-head strong{font-size:13px;color:#42665e}.scene-head span{font-size:11px;color:#84a49a}.window{position:relative;height:290px;border:12px solid #ead9ad;border-bottom-width:18px;border-radius:132px 132px 15px 15px;background:#9ad8df;box-shadow:inset 0 0 0 5px #ffefc9,0 10px 0 #ddc18a,0 13px 22px #a0aa9b3d;overflow:hidden;isolation:isolate}.window:before{content:"";position:absolute;inset:0;background:linear-gradient(122deg,#d9fcffb3 0 19%,transparent 19% 31%,#ffffff54 31% 37%,transparent 37% 75%,#ffffff35 75% 80%,transparent 80%),linear-gradient(180deg,#8ddaf1,#83d9d4 65%,#9fdbc7);z-index:0}.cloud{position:absolute;z-index:1;opacity:.55;background:white;border-radius:60px;filter:blur(8px)}.cloud-a{width:99px;height:28px;left:16%;top:32%}.cloud-b{width:79px;height:21px;right:15%;top:22%}.hill{position:absolute;border-radius:55% 55% 0 0;bottom:-85px;z-index:1}.hill-a{height:170px;width:260px;left:-35px;background:#73ba93;transform:rotate(10deg)}.hill-b{height:190px;width:280px;right:-80px;background:#55a487;transform:rotate(-20deg)}.mullion-v,.mullion-h{position:absolute;z-index:4;background:#f7e6bf;box-shadow:0 0 0 2px #c8ae79}.mullion-v{top:0;bottom:0;left:49%;width:11px}.mullion-h{top:58%;left:0;right:0;height:11px}.cracks{position:absolute;z-index:5;width:100%;height:100%;top:0;left:0;fill:none;stroke:#eaf9f9;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 1px 1px #3c7583a8);opacity:1;transition:opacity .7s ease,transform .7s ease}.window.is-fixed .cracks{opacity:0;transform:scale(.92)}.shine{position:absolute;z-index:6;font-size:42px;color:white;text-shadow:0 2px 17px #ffffff;opacity:0;transform:scale(.5) rotate(-15deg);transition:opacity .6s .3s,transform .6s .3s}.shine-a{right:20%;top:25%}.shine-b{right:10%;top:48%;font-size:25px}.window.is-fixed .shine{opacity:1;transform:scale(1) rotate(0)}.window:after{content:"";position:absolute;inset:0;z-index:7;pointer-events:none;border:3px solid #fff8df77;border-radius:inherit}.tools{display:flex;align-items:center;justify-content:space-between;gap:6px;margin:31px 0 16px}.tool-left{display:flex;align-items:center;gap:9px;color:#548177;font-size:12px;font-weight:700}.tool-badge{width:32px;height:32px;display:grid;place-items:center;border-radius:10px;background:#e4f7ef;color:#339b85;font-size:16px}.tool-right{font-size:11px;background:#fff6df;color:#b47f32;padding:8px 10px;border-radius:9px}.progress-track{height:7px;width:100%;background:#e5efe7;border-radius:100px;overflow:hidden}.progress-fill{height:100%;width:9%;background:linear-gradient(90deg,#7acfad,#25a68d);border-radius:100px;transition:width 1s cubic-bezier(.2,.9,.2,1)}.progress-info{margin-top:10px;display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#83a097}.progress-info strong{font-size:12px;color:#389681}.float-note{position:absolute;z-index:3;font-size:12px;font-weight:800;color:#5e8579;background:white;border-radius:13px;box-shadow:0 9px 25px #4c8a7a1e;padding:12px 16px;transform:rotate(-7deg)}.float-note.one{top:38px;right:-18px}.float-note.two{bottom:37px;left:-25px;transform:rotate(6deg);color:#b68a3a}.scene-decoration{position:absolute;z-index:1;font-size:35px;color:#f4c46d}.deco-one{right:0;bottom:115px}.deco-two{left:23px;top:75px;font-size:21px;color:#68bfa7}
-    .section{padding:108px 0}.section-title{font-size:clamp(30px,3.3vw,44px);letter-spacing:-.035em;line-height:1.3;margin:16px 0 16px}.section-sub{color:#7a968c;font-size:15px;line-height:1.9}.section-kicker{font-size:12px;font-weight:900;letter-spacing:.16em;color:#239980}.section.center{text-align:center}.feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}.feature{background:white;border:1px solid #e2efe7;border-radius:24px;padding:31px 29px 34px;box-shadow:0 13px 30px #588c7910;transition:transform .2s,box-shadow .2s}.feature:hover{transform:translateY(-5px);box-shadow:0 18px 38px #588c791e}.feature-icon{width:54px;height:54px;border-radius:17px;background:#eaf9f1;display:grid;place-items:center;margin-bottom:23px;color:#32a18a}.feature:nth-child(2) .feature-icon{background:#fff4df;color:#c6953f}.feature:nth-child(3) .feature-icon{background:#e7f4ff;color:#5e9fcb}.feature h3{font-size:19px;letter-spacing:.01em;margin-bottom:12px}.feature p{font-size:13px;line-height:1.95;color:#80968f;margin:0}.disclaimer{font-size:12px;color:#97aba3;margin-top:25px;text-align:center}
-    .about-section{background:#ebf7f0;border-top:1px solid #dbeee4;border-bottom:1px solid #dbeee4}.about{display:grid;grid-template-columns:.75fr 1.25fr;gap:72px;align-items:center}.about-visual{position:relative;margin:0 auto;width:100%;max-width:310px}.about-visual:before{content:"";position:absolute;inset:30px -25px -25px 25px;border-radius:40px;background:#d2ebdf;transform:rotate(-7deg)}.about-visual img{display:block;position:relative;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border:8px solid white;border-radius:33px;box-shadow:0 24px 44px #548f7a27;transform:rotate(3deg)}.about-visual .pin{position:absolute;top:-23px;right:-28px;background:var(--yellow);border:5px solid #f9fefb;color:#816025;border-radius:50%;width:74px;height:74px;display:grid;place-items:center;font-weight:900;font-size:14px;transform:rotate(14deg)}.about p{color:#617c72;font-size:15px;line-height:2.15;max-width:570px}.quote{font-size:clamp(21px,2.4vw,30px);font-weight:900;color:#278d79;letter-spacing:-.04em;margin:25px 0 18px}.about-sign{font-size:11px;letter-spacing:.19em;font-weight:900;color:#93a99f}
-    .status-section{padding:95px 0 110px}.status-panel{background:linear-gradient(120deg,#fffdf7 0%,#fcfffc 100%);border:1px solid #e0eee4;border-radius:30px;padding:38px;display:flex;align-items:center;justify-content:space-between;gap:35px;box-shadow:0 15px 42px #57877512}.status-label{display:inline-block;font-size:12px;color:#2f9c85;background:#e1f6ed;border:1px solid #caebdc;border-radius:100px;padding:7px 14px;margin-bottom:17px;font-weight:800}.status-panel h2{font-size:25px;margin-bottom:12px}.status-panel p{font-size:14px;color:#7f978d;line-height:1.9;margin-bottom:0;max-width:620px}.status-art{width:124px;height:124px;border-radius:28px;flex-shrink:0;background:#d8f5e9;display:grid;place-items:center;position:relative;color:#238c76;font-size:58px;transform:rotate(8deg)}.status-art:before{content:"";position:absolute;width:80px;height:80px;border:3px solid #7bcdb9;border-radius:22px;transform:rotate(-16deg)}.status-art span{position:relative}
-    footer{background:#153b38;color:#c6ddd5;padding:33px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:18px}.footer-brand{font-size:13px;font-weight:800;color:white}.footer-brand small{display:block;color:#83aca1;font-size:10px;letter-spacing:.1em;margin-top:5px}.footer-side{font-size:12px;color:#91b1a7;line-height:1.8;text-align:right}.footer-side a{color:#d2eee5;text-decoration:underline;text-underline-offset:3px}
-    @media(max-width:980px){.hero{gap:13px}.hero h1{font-size:clamp(38px,5vw,54px)}.scene-area{min-height:440px}.scene-card{width:90%;padding:18px}.window{height:252px}.float-note.one{right:-9px}.float-note.two{left:0}.about{gap:45px}}
-    @media(max-width:740px){.wrap{width:min(100% - 34px,560px)}.nav{height:78px}.brand-img{width:46px;height:46px;border-radius:13px}.brand-name{font-size:15px}.brand-en{font-size:9px}.nav-links{display:none}.nav-tag{font-size:11px;padding:9px 11px}.hero{grid-template-columns:1fr;padding:28px 0 78px;min-height:auto;gap:16px}.hero h1{font-size:clamp(39px,9.2vw,54px);line-height:1.26;margin:23px 0 17px}.lead{font-size:14px;line-height:2}.hero-actions{margin-top:23px}.micro{margin-top:18px}.scene-area{min-height:475px;margin-top:3px}.scene-halo{width:min(100%,430px);height:auto;aspect-ratio:1}.scene-card{width:min(93%,425px)}.window{height:260px}.float-note.one{right:-5px;top:24px}.float-note.two{left:-5px;bottom:8px}.section{padding:76px 0}.feature-grid{grid-template-columns:1fr;gap:14px;margin-top:32px}.feature{padding:24px 26px}.feature-icon{margin-bottom:14px}.feature h3{margin-bottom:7px}.about{grid-template-columns:1fr;gap:45px}.about-visual{max-width:245px}.about-visual .pin{right:-17px;width:60px;height:60px;font-size:12px}.status-section{padding:72px 0 85px}.status-panel{padding:28px;align-items:flex-start}.status-art{display:none}.status-panel h2{font-size:22px}.footer-inner{align-items:flex-start;flex-direction:column;gap:18px}.footer-side{text-align:left}}
-    @media(max-width:360px){.wrap{width:calc(100% - 28px)}.brand-name{font-size:13px}.nav-tag{font-size:10px}.scene-area{min-height:395px}.scene-card{padding:15px;width:94%}.window{height:223px}.float-note{font-size:10px}.hero h1{font-size:36px}}
-    @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+    :root{--ink:#203f39;--muted:#65847c;--green:#188e78;--green-dark:#12705f;--mint:#d8f4e9;--line:#dcece6;--paper:#f8fcf9;--white:#fff;--accent:#f6c977}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft Yahei",sans-serif;-webkit-font-smoothing:antialiased}
+    a{text-decoration:none;color:inherit}
+    a:focus-visible{outline:3px solid #17a58c;outline-offset:5px;border-radius:8px}
+    ::selection{background:#bdebdc;color:#173b32}
+    .container{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+    .topbar{position:relative;z-index:5;border-bottom:1px solid #dfece6;background:#fcfffdde}
+    .topbar-inner{min-height:88px;display:flex;justify-content:space-between;align-items:center;gap:24px}
+    .identity{display:flex;align-items:center;gap:12px;min-width:0}
+    .identity img{width:51px;height:51px;object-fit:cover;border-radius:15px;border:2px solid white;box-shadow:0 5px 16px #1b62501c}
+    .identity strong{display:block;font-size:16px;letter-spacing:.025em;white-space:nowrap}
+    .identity small{display:block;color:var(--muted);font-size:10px;letter-spacing:.1em;margin-top:4px;font-weight:650}
+    .nav{display:flex;align-items:center;gap:28px;font-size:13px;font-weight:700;color:#557b70}
+    .nav a:hover{color:var(--green)}
+    .nav .nav-pill{padding:11px 17px;border:1px solid #bfe9da;background:#f3fdf7;border-radius:999px;color:#247963}
+    .hero-area{position:relative;overflow:hidden;background:radial-gradient(ellipse 70% 100% at 90% 15%,#c9f3e5 0%,transparent 73%),linear-gradient(145deg,#fbfffc 10%,#ecf8f2 100%);border-bottom:1px solid #e0eee7}
+    .hero-area:before,.hero-area:after{content:"";position:absolute;width:640px;height:640px;border:1px solid #ffffffb8;border-radius:50%;pointer-events:none}
+    .hero-area:before{top:-400px;right:-250px}.hero-area:after{bottom:-540px;left:-250px}
+    .hero{position:relative;z-index:1;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:45px;padding-top:102px;padding-bottom:108px;min-height:620px}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;padding:9px 14px;border-radius:999px;background:#fffefd;border:1px solid #dfefe6;color:#358473;font-size:11px;font-weight:800;letter-spacing:.13em;box-shadow:0 5px 20px #1657450b}
+    .eyebrow .dot{height:8px;width:8px;border-radius:50%;background:#6ac3a5}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-size:clamp(38px,4.6vw,65px);line-height:1.34;letter-spacing:-.04em;margin:27px 0 23px;font-weight:860}
+    h1 em{color:var(--green);font-style:normal;position:relative;white-space:nowrap}
+    h1 em:after{content:"";position:absolute;bottom:-7px;left:0;right:0;height:8px;border-radius:100%;background:#b7ead9;opacity:.75;transform:rotate(-2deg)}
+    .lead{font-size:16px;line-height:2.15;color:#58786f;max-width:490px;margin-bottom:32px}
+    .lead strong{color:var(--ink)}
+    .hero-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--green);border-radius:13px;padding:15px 25px;color:white;font-size:14px;font-weight:750;box-shadow:0 12px 22px #1a9a7a24;transition:transform .2s,background .2s}
+    .button:hover{background:var(--green-dark);transform:translateY(-2px)}
+    .hero-aside{font-size:12px;color:#78a096;letter-spacing:.025em}
+    .scene{position:relative;min-height:410px;display:grid;place-items:center}
+    .scene .halo{position:absolute;width:410px;height:410px;border-radius:50%;background:radial-gradient(circle,#f8fffc 0%,#d7f4e8 65%,#c9eede 100%);border:1px solid #ffffffa8;box-shadow:inset 0 0 0 28px #ffffff1f}
+    .scene .ring{position:absolute;width:350px;height:350px;border:1px dashed #87cbb8;border-radius:50%;opacity:.7}
+    .studio-card{position:relative;z-index:2;width:min(335px,84%);padding:28px 28px 25px;background:#ffffffeb;border:1px solid white;border-radius:30px;text-align:center;box-shadow:0 28px 75px #266a5824;transform:rotate(-3deg)}
+    .studio-card .card-label{font-size:10px;color:#7ea99d;letter-spacing:.22em;font-weight:800;text-align:left}
+    .studio-card img{display:block;width:176px;height:176px;object-fit:cover;border-radius:38px;margin:22px auto 19px;box-shadow:0 12px 26px #63bda52b;border:5px solid white}
+    .studio-card h2{font-size:23px;letter-spacing:.04em;margin:0 0 6px;font-weight:850}
+    .studio-card p{font-size:12px;letter-spacing:.11em;color:#82a197;margin:0}
+    .studio-card .card-line{height:1px;background:#e1efe8;margin:23px 0 17px}
+    .studio-card .card-bottom{display:flex;justify-content:space-between;color:#65988a;font-size:11px;font-weight:750}
+    .float-label{position:absolute;z-index:3;border:1px solid white;border-radius:16px;background:#fffef7e8;box-shadow:0 14px 25px #1d705219;padding:14px 17px;font-weight:750;color:#477d6d;font-size:13px}
+    .float-label.one{left:-1%;top:13%;transform:rotate(-9deg)}
+    .float-label.two{right:-2%;bottom:15%;transform:rotate(7deg)}
+    .float-star{position:absolute;z-index:1;color:#efc16c;font-size:42px}
+    .float-star.a{right:7%;top:4%}.float-star.b{left:9%;bottom:7%;font-size:28px}
+    .section{padding:102px 0}
+    .kicker{display:block;font-size:11px;font-weight:850;color:#279d82;letter-spacing:.2em;margin-bottom:17px}
+    .section-title{font-size:clamp(27px,3.2vw,41px);line-height:1.45;letter-spacing:-.025em;margin-bottom:22px;font-weight:850}
+    .about-grid{display:grid;grid-template-columns:.84fr 1.16fr;gap:95px;align-items:start}
+    .about-copy{font-size:15px;color:#597970;line-height:2.15;max-width:610px}
+    .about-copy p{margin-bottom:19px}
+    .about-quote{margin-top:25px;padding:17px 23px;background:#ebf9f2;border-left:3px solid #71c9ab;color:#327e6b;font-size:15px;font-weight:750;border-radius:0 12px 12px 0}
+    .values-wrap{background:#f0f9f4;border-top:1px solid #e4f1e9;border-bottom:1px solid #e4f1e9}
+    .values-head{text-align:center;max-width:590px;margin:0 auto 37px}
+    .values-head p{color:#729187;font-size:14px;line-height:1.9;margin:0}
+    .value-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .value{background:#fff;border:1px solid #e0ede7;border-radius:23px;padding:33px 30px 35px;min-height:212px}
+    .value-icon{width:49px;height:49px;display:grid;place-items:center;border-radius:15px;background:#e4f7ec;color:#258871;font-size:23px;margin-bottom:23px}
+    .value:nth-child(2) .value-icon{background:#fff3da;color:#cf9655}
+    .value:nth-child(3) .value-icon{background:#e7f4fb;color:#649bb1}
+    .value h3{font-size:17px;margin-bottom:12px}
+    .value p{font-size:13px;color:#78938a;line-height:1.95;margin:0}
+    .closing{text-align:center;padding:97px 0 104px}
+    .closing .spark{display:block;font-size:30px;color:#e8b65c;margin-bottom:20px}
+    .closing h2{font-size:clamp(24px,3vw,36px);line-height:1.55;margin-bottom:12px;letter-spacing:-.015em}
+    .closing p{font-size:14px;color:#78968c;line-height:1.9;margin-bottom:0}
+    footer{border-top:1px solid #e0ece5;background:#fcfefc}
+    .footer-inner{min-height:102px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .footer-brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:13px}
+    .footer-brand img{width:35px;height:35px;border-radius:10px}
+    .footer-note{font-size:11px;color:#85a198;text-align:right;line-height:1.8}
+    @media(max-width:980px){.hero{gap:20px}.about-grid{gap:50px}.float-label.one{left:0}.float-label.two{right:0}}
+    @media(max-width:760px){
+      .container{width:min(100% - 34px,520px)}
+      .topbar-inner{min-height:76px}.identity img{width:43px;height:43px;border-radius:13px}.identity strong{font-size:14px}.identity small{font-size:9px}
+      .nav{gap:13px}.nav>a:not(.nav-pill){display:none}.nav .nav-pill{font-size:11px;padding:9px 12px}
+      .hero{grid-template-columns:1fr;gap:20px;padding-top:70px;padding-bottom:70px;min-height:0}
+      h1{font-size:clamp(36px,8vw,48px)}.lead{font-size:14px;line-height:2}
+      .scene{min-height:380px;margin-top:10px}.scene .halo{width:340px;height:340px}.scene .ring{width:295px;height:295px}
+      .studio-card{width:min(305px,83%);padding:20px 23px 22px}.studio-card img{width:135px;height:135px;border-radius:29px;margin:18px auto}
+      .studio-card h2{font-size:20px}.float-label{font-size:11px;padding:11px 12px}.float-label.one{left:0;top:12%}.float-label.two{right:0;bottom:7%}
+      .section{padding:76px 0}.about-grid{grid-template-columns:1fr;gap:17px}.section-title{font-size:29px}.about-copy{font-size:14px}
+      .value-grid{grid-template-columns:1fr;gap:12px}.value{min-height:0;padding:26px}.value-icon{margin-bottom:17px}
+      .closing{padding:75px 0}.footer-inner{padding:25px 0;flex-direction:column;align-items:flex-start;gap:9px}.footer-note{text-align:left}
+    }
+    @media(max-width:370px){.identity small{display:none}.hero-actions{gap:10px}.hero-aside{font-size:10px}.scene .halo{width:290px;height:290px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
   </style>
 </head>
-<body>
-  <a class="skip" href="#main">跳转到主要内容</a>
-  <header class="site-header" id="top">
-    <div class="wrap nav">
-      <a class="nav-group" href="#top" aria-label="小小翻新工作室首页">
-        <img class="brand-img" src="./logo.webp" alt="小小翻新工作室 Logo" width="52" height="52" />
-        <div><div class="brand-name">小小翻新工作室</div><div class="brand-en">TINY RESTORE STUDIO</div></div>
+<body id="top">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="identity" href="#top" aria-label="返回小小翻新工作室首页">
+        <img src="./logo.webp" alt="小小翻新工作室 Logo" width="51" height="51">
+        <span><strong>小小翻新工作室</strong><small>TINY RESTORE STUDIO</small></span>
       </a>
-      <nav class="nav-links" aria-label="主导航"><a href="#game">我们的游戏</a><a href="#about">关于工作室</a><a href="#updates">开发动态</a></nav>
-      <span class="nav-tag"><i aria-hidden="true"></i>正在独立开发</span>
+      <nav class="nav" aria-label="网站导航">
+        <a href="#about">关于我们</a>
+        <a href="#values">创作理念</a>
+        <a href="#about" class="nav-pill">认识工作室 ↗</a>
+      </nav>
     </div>
   </header>
-  <main id="main">
-    <div class="hero-wrap">
-      <section class="hero wrap" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <span class="eyebrow"><span class="star" aria-hidden="true">✦</span> 一间认真做小快乐的工作室</span>
-          <h1 id="hero-title">小小修复，<br />让生活<span style="white-space:nowrap"><em>闪闪发光。</em></span></h1>
-          <p class="lead">你好，这里是<strong>小小翻新工作室</strong>。我们喜欢简单、有趣、能让人慢下来玩一会儿的游戏。正在制作一款以玻璃修复为主题的治愈解压小游戏，期待和你分享。</p>
-          <div class="hero-actions"><a href="#game" class="btn btn-primary">看看正在做的游戏 <span aria-hidden="true">↗</span></a><button class="btn btn-secondary" id="repairBtn" type="button" aria-controls="demoWindow" aria-pressed="false">✦ 试着修复玻璃</button></div>
-          <p class="micro"><span>✳ 概念互动演示</span> · 点一下按钮，看看玻璃如何焕然一新</p>
-        </div>
-        <div class="scene-area" aria-label="玻璃修复主题插画互动演示">
-          <div class="scene-halo" aria-hidden="true"></div><span class="scene-decoration deco-one" aria-hidden="true">✦</span><span class="scene-decoration deco-two" aria-hidden="true">✦</span>
-          <div class="float-note one" aria-hidden="true">🌿 慢慢来，也很美好</div>
-          <div class="scene-card">
-            <div class="scene-head"><strong>🪟 今日的修复任务</strong><span>01 / GLASS REPAIR</span></div>
-            <div class="window" id="demoWindow" role="img" aria-label="一扇有裂纹的玻璃窗，点击修复按钮可观看它恢复光亮">
-              <span class="cloud cloud-a"></span><span class="cloud cloud-b"></span><span class="hill hill-a"></span><span class="hill hill-b"></span>
-              <svg class="cracks" viewBox="0 0 360 275" preserveAspectRatio="none" aria-hidden="true"><path d="M218 7 L211 42 L231 66 L212 92 L237 117 L224 147 L251 166 L267 199 L257 225 L280 269"/><path d="M212 92 L172 107 L144 132 L105 135"/><path d="M224 147 L192 164 L186 202 L164 226"/><path d="M251 166 L293 149 L316 151"/><path d="M211 42 L178 27 L167 9"/></svg>
-              <span class="mullion-v" aria-hidden="true"></span><span class="mullion-h" aria-hidden="true"></span><span class="shine shine-a" aria-hidden="true">✦</span><span class="shine shine-b" aria-hidden="true">✧</span>
-            </div>
-            <div class="tools"><div class="tool-left"><span class="tool-badge" aria-hidden="true">✦</span><span id="taskText">准备修复玻璃</span></div><span class="tool-right" id="taskBadge">待修复</span></div>
-            <div class="progress-track" role="progressbar" aria-label="概念演示修复进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="9" id="progressTrack"><div class="progress-fill" id="progressFill"></div></div>
-            <div class="progress-info"><span>修复进度 · 仅为视觉演示</span><strong id="progressText" aria-live="polite">9%</strong></div>
+  <main>
+    <div class="hero-area">
+      <section class="container hero" aria-labelledby="hero-title">
+        <div>
+          <span class="eyebrow"><span class="dot"></span> HELLO · TINY RESTORE STUDIO</span>
+          <h1 id="hero-title">让小小的灵感，<br>慢慢<em>闪闪发光。</em></h1>
+          <p class="lead">你好，这里是<strong>小小翻新工作室</strong>。我们喜欢那些看似不起眼，却能带来一点快乐的小创意。保持好奇、认真琢磨，让温柔又有趣的想法慢慢长出自己的模样。</p>
+          <div class="hero-actions">
+            <a class="button" href="#about">认识我们 <span aria-hidden="true">↗</span></a>
+            <span class="hero-aside">✳ 认真对待每一个小灵感</span>
           </div>
-          <div class="float-note two" aria-hidden="true">✨ 一点点修好，就很开心</div>
+        </div>
+        <div class="scene" aria-label="小小翻新工作室品牌展示">
+          <div class="halo" aria-hidden="true"></div>
+          <div class="ring" aria-hidden="true"></div>
+          <span class="float-star a" aria-hidden="true">✦</span>
+          <span class="float-star b" aria-hidden="true">✧</span>
+          <span class="float-label one" aria-hidden="true">✦ 保持好奇</span>
+          <span class="float-label two" aria-hidden="true">♡ 用心创作</span>
+          <div class="studio-card">
+            <div class="card-label">A LITTLE CREATIVE STUDIO</div>
+            <img src="./logo.webp" alt="" width="176" height="176">
+            <h2>小小翻新工作室</h2>
+            <p>TINY RESTORE STUDIO</p>
+            <div class="card-line" aria-hidden="true"></div>
+            <div class="card-bottom"><span>SMALL IDEAS</span><span>BIG SMILES ✳</span></div>
+          </div>
         </div>
       </section>
-  </div>
-      <section class="section wrap center" id="game" aria-labelledby="game-heading">
-        <span class="section-kicker">OUR LITTLE GAME</span>
-        <h2 class="section-title" id="game-heading">正在制作：玻璃修复站</h2>
-        <p class="section-sub">一款以玻璃修复为主题的休闲解压小游戏。<br />从小小的瑕疵开始，感受一点一点变好的满足感。</p>
-        <div class="feature-grid">
-          <article class="feature"><div class="feature-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 6.1L20 11l-6.1 1.9L12 19l-1.9-6.1L4 11l6.1-1.9L12 3z"/><path d="M20 18v4M18 20h4"/></svg></div><h3>一点点修复</h3><p>把破损慢慢修好，看见前后的变化，收获一份小小的成就感。</p></article>
-          <article class="feature"><div class="feature-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></svg></div><h3>轻松的节奏</h3><p>不必着急，不用赶进度。我们希望每一次操作都能让人放松一点。</p></article>
-          <article class="feature"><div class="feature-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="3"/><path d="M4 11h16M12 3v18"/><path d="M16 7l-1 2-2 1"/></svg></div><h3>治愈的小细节</h3><p>围绕玻璃、光线与修复过程，慢慢打磨让人舒服的视觉体验。</p></article>
+    </div>
+    <section class="container section about-grid" id="about" aria-labelledby="about-heading">
+      <div>
+        <span class="kicker">ABOUT OUR STUDIO</span>
+        <h2 class="section-title" id="about-heading">一间认真对待<br>小创意的工作室。</h2>
+      </div>
+      <div class="about-copy">
+        <p><strong>小小翻新工作室</strong>是一间喜欢探索新鲜想法的独立游戏工作室。</p>
+        <p>我们相信，好的体验不一定需要复杂的形式。有时候，一个恰到好处的小细节、一点轻松的节奏，或者一个出乎意料的巧思，就足以让平凡的日常变得有趣。</p>
+        <p>我们希望保留创作时的好奇心，也愿意花时间照顾那些容易被忽略的细节，慢慢做出有温度、让人愿意停留片刻的体验。</p>
+        <div class="about-quote">“小小的创意，也值得被认真对待。”</div>
+      </div>
+    </section>
+    <section class="values-wrap" id="values" aria-labelledby="values-heading">
+      <div class="container section">
+        <div class="values-head">
+          <span class="kicker">WHAT WE BELIEVE</span>
+          <h2 class="section-title" id="values-heading">我们喜欢这样的创作方式</h2>
+          <p>没有太多复杂的口号，只希望一直保留这些简单的坚持。</p>
         </div>
-        <p class="disclaimer">目前仍在开发中；官网画面为品牌概念展示，不代表正式游戏实机画面或最终玩法。</p>
-      </section>
-      <section class="section about-section" id="about" aria-labelledby="about-heading">
-        <div class="wrap about">
-          <div class="about-visual"><img src="./logo.webp" alt="小小翻新工作室：窗户、绿叶与修复工具组成的卡通品牌标志" width="640" height="640" loading="lazy" /><span class="pin">HELLO<br />☺</span></div>
-          <div><span class="section-kicker">HELLO, WE ARE TINY RESTORE</span><h2 class="section-title" id="about-heading">关于小小翻新工作室</h2><p>我们是一间正在认真制作小游戏的独立工作室，喜欢修复、整理、翻新这些看似平凡却充满满足感的瞬间。</p><p>希望有一天，打开我们的游戏，就像推开一扇晒着太阳的小窗：不需要想太多，安安静静地玩一会儿，也是一件快乐的事情。</p><div class="quote">“把小小的破损，修成大大的快乐。”</div><span class="about-sign">小小翻新工作室 / TINY RESTORE STUDIO</span></div>
+        <div class="value-grid">
+          <article class="value"><div class="value-icon" aria-hidden="true">✦</div><h3>保持好奇</h3><p>对新鲜的想法多一点兴趣，让灵感有机会自由生长。</p></article>
+          <article class="value"><div class="value-icon" aria-hidden="true">♡</div><h3>用心打磨</h3><p>不急着追求庞大，先把每一个值得在意的细节做好。</p></article>
+          <article class="value"><div class="value-icon" aria-hidden="true">☼</div><h3>分享快乐</h3><p>希望每一次创作，都能为某个人的日常增添一点轻松。</p></article>
         </div>
-      </section>
-      <section class="wrap status-section" id="updates" aria-labelledby="status-heading">
-        <span class="section-kicker">WORK IN PROGRESS</span>
-        <div class="status-panel"><div><span class="status-label"><span class="status-dot" aria-hidden="true"></span>游戏开发中</span><h2 id="status-heading">第一块玻璃，正在慢慢修好。</h2><p>玻璃修复主题游戏仍在制作和打磨阶段。等准备好正式分享更多内容时，我们会在这里更新。谢谢你的关注和耐心。</p></div><div class="status-art" aria-hidden="true"><span>✦</span></div></div>
-      </section>
-    </main>
-  <footer><div class="wrap footer-inner"><div class="footer-brand">小小翻新工作室 <small>TINY RESTORE STUDIO · MADE WITH CARE</small></div><div class="footer-side">© <span id="year">2026</span> 小小翻新工作室 · 独立游戏开发<br /><a href="#top">回到顶部 ↑</a></div></div></footer>
-  <script>
-    (()=>{
-      const button=document.getElementById('repairBtn');
-      const win=document.getElementById('demoWindow');
-      const track=document.getElementById('progressTrack');
-      const fill=document.getElementById('progressFill');
-      const percent=document.getElementById('progressText');
-      const label=document.getElementById('taskText');
-      const badge=document.getElementById('taskBadge');
-      let fixed=false;
-      button.addEventListener('click',()=>{
-        fixed=!fixed;
-        win.classList.toggle('is-fixed',fixed);
-        win.setAttribute('aria-label',fixed?'一扇已经修复并闪闪发光的玻璃窗':'一扇有裂纹的玻璃窗，点击修复按钮可观看它恢复光亮');
-        track.setAttribute('aria-valuenow',fixed?'100':'9');
-        fill.style.width=fixed?'100%':'9%';
-        percent.textContent=fixed?'100%':'9%';
-        label.textContent=fixed?'玻璃焕然一新 ✨':'准备修复玻璃';
-        badge.textContent=fixed?'修复完成':'待修复';
-        button.textContent=fixed?'↻ 再体验一次':'✦ 试着修复玻璃';
-        button.setAttribute('aria-pressed',String(fixed));
-      });
-      document.getElementById('year').textContent=new Date().getFullYear();
-    })();
-  </script>
+      </div>
+    </section>
+    <section class="container closing" aria-labelledby="closing-heading">
+      <span class="spark" aria-hidden="true">✧</span>
+      <h2 id="closing-heading">把日子过得慢一点，<br>把喜欢的事情做得好一点。</h2>
+      <p>感谢你来到小小翻新工作室。</p>
+    </section>
+  </main>
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand"><img src="./logo.webp" alt="" width="35" height="35">小小翻新工作室 <span aria-hidden="true">·</span> Tiny Restore Studio</div>
+      <div class="footer-note">认真做小快乐。<br>© 小小翻新工作室</div>
+    </div>
+  </footer>
 </body>
 </html>
